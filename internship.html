@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="b.css">
+</head>
+<body>
+    <div class="navbar">
+        <button onclick="showSlide('Home')">Home</button>
+        <button onclick="showSlide('addBook')">Add Book</button>
+        <button onclick="showSlide('manageBook')">Manage Books</button>
+        <button onclick="showSlide('editBook')">Edit Book</button>
+        <button onclick="showSlide('registeredBooks')">Registered Books</button>
+        <button onclick="showSlide('issueBook')">Issue Book</button>
+        <button onclick="showSlide('deleteBook')">Delete Book</button>
+    </div>
+    <div id="Home" class="slide">
+        <h2>Home</h2>
+        <p>Welcome to the Library Management System.</p>
+    </div>
+    <div id="addBook" class="slide">
+        <h2>Add Book</h2>
+        <form id="addBookForm">
+            <label>Book Title: <input type="text" id="bookTitle" required></label><br>
+            <label>Author: <input type="text" id="author" required></label><br>
+            <label>Price: <input type="number" id="price" step="0.01" required></label><br>
+            <button type="button" onclick="addBook()">Add Book</button>
+        </form>
+        <p id="addBookMessage"></p>
+    </div>
+    <div id="manageBook" class="slide">
+        <h2>Manage Books</h2>
+        <ul id="bookList"></ul>
+    </div>
+    <div id="editBook" class="slide">
+        <h2>Edit Book</h2>
+        <form id="editBookForm">
+            <label>Book ID: <input type="number" id="editBookId" required></label><br>
+            <label>New Title: <input type="text" id="newTitle"></label><br>
+            <label>New Author: <input type="text" id="newAuthor"></label><br>
+            <label>New Price: <input type="number" id="newPrice" step="0.01"></label><br>
+            <button type="button" onclick="editBook()">Update Book</button>
+        </form>
+        <p id="editBookMessage"></p>
+    </div>
+    <div id="registeredBooks" class="slide">
+        <h2>Registered Books</h2>
+        <ul id="registeredBookList"></ul>
+    </div>
+    <div id="issueBook" class="slide">
+        <h2>Issue Book</h2>
+        <form id="issueBookForm">
+            <label>Book ID: <input type="number" id="issueBookId" required></label><br>
+            <button type="button" onclick="issueBook()">Issue Book</button>
+        </form>
+        <p id="issueBookMessage"></p>
+    </div>
+    <div id="deleteBook" class="slide">
+        <h2>Delete Book</h2>
+        <form id="deleteBookForm">
+            <label>Book ID: <input type="number" id="deleteBookId" required></label><br>
+            <button type="button" onclick="deleteBook()">Delete Book</button>
+        </form>
+        <p id="deleteBookMessage"></p>
+    </div>
+    <script src="internship.js"></script>
+</body>
+</html>
